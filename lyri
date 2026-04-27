@@ -1231,7 +1231,7 @@
 			local blur = library:create( "BlurEffect" , {
 				Parent = lighting;
 				Enabled = true;
-				Size = 15
+				Size = 0
 			});    
 
 			library.cache = library:create("ScreenGui", {
@@ -1257,7 +1257,7 @@
 					end
 				end
 
-				library:tween(blur, {Size = bool and (flags["Blur Size"] or 15) or 0})
+				library:tween(blur, {Size = bool and (flags["Blur Size"] or 0) or 0})
 
 				dock_outline.Visible = bool;
 
@@ -1726,7 +1726,7 @@
 						game:GetService("TeleportService"):TeleportToPlaceInstance(game.PlaceId, data.id)
 					end 
 				end})
-				section:slider({name = "Max Players", flag = "max_players", min = 0, max = 40, default = 15, interval = 1})
+				section:slider({name = "Max Players", flag = "max_players", min = 0, max = 40, default = 0, interval = 1})
 			-- 
 
 			-- cfg holder
